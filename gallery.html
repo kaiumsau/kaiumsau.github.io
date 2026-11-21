@@ -1,0 +1,63 @@
+---
+title: Gallery
+permalink: /gallery/
+description: Photos and videos from fieldwork, laboratory sessions, classes and conferences of the Kaium research group.
+---
+{% assign photos = site.data.gallery.photos %}
+{% assign videos = site.data.gallery.videos %}
+{% if photos %}{% assign photos = photos | sort: "date" | reverse %}{% endif %}
+{% if videos %}{% assign videos = videos | sort: "date" | reverse %}{% endif %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Gallery</h1>
+    <p>Moments from our fieldwork, laboratory, classrooms and conferences.</p>
+  </header>
+
+  <section class="section">
+    <h2>Photos</h2>
+    {% if photos and photos.size > 0 %}
+      {% assign albums = photos | map: "album" | uniq | sort %}
+      <div class="filters" role="group" aria-label="Filter photos by album">
+        <button type="button" data-cat="all" aria-pressed="true">All</button>
+        {% for a in albums %}{% if a %}<button type="button" data-cat="{{ a | slugify }}" aria-pressed="false">{{ a }}</button>{% endif %}{% endfor %}
+      </div>
+      <ul class="photo-grid">
+        {% for p in photos %}
+        <li class="post-item photo" data-cat="{{ p.album | slugify }}">
+          <button type="button" class="photo-open" data-src="{{ '/assets/gallery/' | append: p.file | relative_url }}" data-caption="{{ p.caption | escape }}{% if p.date %}, {{ p.date | date: '%B %Y' }}{% endif %}">
+            <img src="{{ '/assets/gallery/' | append: p.file | relative_url }}" alt="{{ p.caption | escape }}" loading="lazy">
+          </button>
+          <p class="photo-caption">{{ p.caption }}{% if p.date %} <span>{{ p.date | date: '%B %Y' }}</span>{% endif %}</p>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="filter-empty" hidden>No photos in this album yet.</p>
+    {% else %}
+      <p class="materials-empty">Photos from fieldwork, lab sessions and conferences will be posted here.</p>
+    {% endif %}
+  </section>
+
+  <section class="section">
+    <h2>Videos</h2>
+    {% if videos and videos.size > 0 %}
+      <ul class="video-grid">
+        {% for v in videos %}
+        <li>
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ v.youtube }}" title="{{ v.title | escape }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="photo-caption">{{ v.title }}{% if v.date %} <span>{{ v.date | date: '%B %Y' }}</span>{% endif %}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="materials-empty">Videos of lectures, lab demonstrations and talks will be posted here.</p>
+    {% endif %}
+  </section>
+</div>
+
+<dialog class="lightbox" aria-label="Photo viewer">
+  <button type="button" class="lightbox-close">Close</button>
+  <img src="" alt="">
+  <p class="lightbox-caption"></p>
+</dialog>

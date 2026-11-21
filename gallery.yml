@@ -1,0 +1,15 @@
+# PHOTOS — upload images to assets/gallery/ (JPG or PNG, ideally under 1 MB each),
+# then add one block per photo below.
+# album: any short name, e.g. Fieldwork, Laboratory, Conferences, Classroom, Events
+photos:
+# - file: river-sampling-2026.jpg
+#   caption: Collecting water samples from the Buriganga River
+#   date: 2026-10-05
+#   album: Fieldwork
+
+# VIDEOS — upload videos to YouTube (they can be "Unlisted"), then copy the ID:
+# in https://www.youtube.com/watch?v=AbC123xyz the ID is AbC123xyz
+videos:
+# - youtube: AbC123xyz
+#   title: Introduction to QuEChERS sample preparation
+#   date: 2026-11-01

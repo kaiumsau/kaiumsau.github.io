@@ -1,0 +1,62 @@
+# Group members. To add someone, copy one block (from "- name:" down) and edit it.
+# photo: upload a square photo to assets/img/people/ and write its file name, e.g. photo: adia.jpg
+#        Leave photo empty to show initials instead.
+# group: pi, phd, ms, ra (research assistant) or alumni
+
+- name: Abdul Kaium, PhD
+  group: pi
+  role: Principal investigator
+  program: Associate Professor and Chairman, Department of Agricultural Chemistry
+  topic: Pesticide residues, trace metals and organic micropollutants in water, soil, crops and fish
+  photo: ""
+  email: ""
+
+- name: Adia Tabassum
+  group: ms
+  role: MS student
+  program: Food Safety, SAU
+  topic: Insect and plant growth regulators in river and pond water and fish, with human health risk assessment
+  photo: ""
+  email: ""
+
+- name: Md. Alamgir Kabir
+  group: ms
+  role: MS student
+  program: Agricultural Chemistry, SAU
+  topic: Coal-derived potentially toxic elements in paddy soil and rice around Barapukuria, with risk assessment
+  photo: ""
+  email: ""
+
+- name: Mst Homayra Hima
+  group: ms
+  role: MS student and research assistant
+  program: SAU
+  topic: A low-cost carbon–silica filter for removing organic micropollutants from drinking water
+  photo: ""
+  email: ""
+
+- name: Mehedi Hasan Shakil
+  group: ms
+  role: MS student
+  program: Food Safety, SAU
+  topic: Polycyclic aromatic hydrocarbons in aquatic and agricultural food chains
+  photo: ""
+  email: ""
+
+- name: Takrim Tasware
+  group: ms
+  role: MS student
+  program: SAU
+  topic: Heavy metals (Pb, Cd, Cr, Cu) in fertilizers from Manikganj, Bogura and Dhaka, and their regulatory compliance
+  photo: ""
+  email: ""
+
+# Example alumni entry — remove the # signs to use it
+# - name: Name Surname
+#   group: alumni
+#   role: MS, 2025
+#   program: Agricultural Chemistry, SAU
+#   topic: Thesis title
+#   now: Current position (e.g. Scientific Officer, BARI)
+#   photo: ""
+#   email: ""

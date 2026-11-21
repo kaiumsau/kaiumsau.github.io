@@ -1,0 +1,25 @@
+# Top menu. Items with "children" become a drop-down.
+- title: Home
+  url: /
+- title: Biodata
+  url: /biodata/
+- title: Research
+  children:
+    - title: Research areas
+      url: /research/
+    - title: Projects
+      url: /projects/
+    - title: Group members
+      url: /group/
+    - title: Collaborations
+      url: /collaborations/
+- title: Teaching
+  url: /teaching/
+- title: Publications
+  url: /publications/
+- title: Blog
+  url: /blog/
+- title: Gallery
+  url: /gallery/
+- title: Contact
+  url: /contact/

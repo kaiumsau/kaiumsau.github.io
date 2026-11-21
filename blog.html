@@ -1,0 +1,36 @@
+---
+title: Blog
+permalink: /blog/
+description: Blog posts, popular science and informative articles by Dr. Abdul Kaium on food safety, pesticides and the environment.
+---
+{% assign cats = site.posts | map: "category" | uniq | sort %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Blog and articles</h1>
+    <p>Plain-language writing on food safety, pesticides, water and the chemistry of everyday life, for students and anyone curious.</p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+  <div class="filters" role="group" aria-label="Filter by type">
+    <button type="button" data-cat="all" aria-pressed="true">All</button>
+    {% for c in cats %}{% if c %}<button type="button" data-cat="{{ c | slugify }}" aria-pressed="false">{{ c }}</button>{% endif %}{% endfor %}
+  </div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item" data-cat="{{ post.category | default: 'Blog' | slugify }}">
+      <p class="post-meta">
+        <span class="badge badge-{{ post.category | slugify }}">{{ post.category | default: 'Blog' }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%-d %B %Y' }}</time>
+      </p>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.summary | default: post.excerpt | strip_html | truncatewords: 35 }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="filter-empty" hidden>No posts in this category yet.</p>
+  {% else %}
+  <p>The first articles are on their way.</p>
+  {% endif %}
+
+  <p style="margin-top:2rem">Follow new posts with the <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>.</p>
+</div>

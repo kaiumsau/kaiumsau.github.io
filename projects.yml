@@ -1,0 +1,74 @@
+# Projects. To add one, copy a block and edit it.
+# status: ongoing, proposed or completed
+
+- title: Insecticide residues in fish and water from rivers, ponds and markets of Dhaka city
+  status: proposed
+  years: ""
+  role: Principal investigator
+  funder: SAU Research System (SAURES)
+  partners: Department of Chemistry, Umeå University, Sweden (LC–MS/MS analysis)
+  summary: Measures insecticide residues in water and fish from Dhaka's rivers, ponds and markets, tracks bioaccumulation, and assesses dietary risk for consumers.
+
+- title: Screening fungicides and herbicides in Dhaka's waters and fish
+  status: proposed
+  years: ""
+  role: Principal investigator
+  funder: University Grants Commission of Bangladesh
+  partners: ""
+  summary: Fungicides and herbicides make up most pesticide use in Bangladesh, yet monitoring focuses on insecticides. This one-year study screens them in river and pond water, fish from different water layers and market fish, to study bioaccumulation and select compounds for routine monitoring.
+
+- title: QuEChERS–UHPLC methods for priority food contaminants
+  status: ongoing
+  years: ""
+  role: Principal investigator
+  funder: ""
+  partners: ""
+  summary: Developing and validating extraction and UHPLC–fluorescence/PDA methods for PAHs, bisphenol A, N-methyl carbamates, benzimidazole fungicides and veterinary drug residues in water, rice, vegetables, fish and other foods, using the SAU Food Safety Laboratory.
+
+- title: Potentially toxic elements in paddy soil and rice near the Barapukuria coal mine
+  status: ongoing
+  years: ""
+  role: Supervisor (MS thesis)
+  funder: ""
+  partners: ""
+  summary: Measures coal-derived metals in soil and rice and estimates health risks for people who eat locally grown rice.
+
+- title: Heavy metals in commercial fertilizers
+  status: ongoing
+  years: ""
+  role: Supervisor (MS thesis)
+  funder: ""
+  partners: ""
+  summary: Checks lead, cadmium, chromium and copper in fertilizers sold in Manikganj, Bogura and Dhaka against national limits.
+
+- title: Purity of copper fungicides sold in Bangladesh
+  status: ongoing
+  years: ""
+  role: Principal investigator
+  funder: ""
+  partners: ""
+  summary: Survey of copper hydroxide and copper oxychloride products from Bogura, Jessore and Cumilla, analysed by flame atomic absorption spectrometry.
+
+- title: Screening potassium bromate in bakery bread
+  status: ongoing
+  years: ""
+  role: Principal investigator
+  funder: ""
+  partners: ""
+  summary: A simple UV–Vis spectrophotometric screening method for potassium bromate, a banned flour improver, in bread.
+
+- title: Postdoctoral research (add title)
+  status: completed
+  years: "2023–2025"
+  role: Kempe Foundation Postdoctoral Fellow
+  funder: Kempe Foundation
+  partners: Umeå University, Sweden
+  summary: Add a two-sentence summary of your postdoctoral work.
+
+- title: PhD research (add title)
+  status: completed
+  years: "2018–2022"
+  role: PhD researcher
+  funder: ""
+  partners: Institute of Plant Protection, Chinese Academy of Agricultural Sciences
+  summary: Add a two-sentence summary of your PhD work.

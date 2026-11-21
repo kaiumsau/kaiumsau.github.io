@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="wrap post">
+  <header class="post-head">
+    <p class="post-meta">
+      <a class="badge badge-{{ page.category | slugify }}" href="{{ '/blog/' | relative_url }}#{{ page.category | slugify }}">{{ page.category | default: 'Blog' }}</a>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time>
+      {% assign words = content | number_of_words %}
+      <span>{{ words | divided_by: 200 | plus: 1 }} min read</span>
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="post-summary">{{ page.summary }}</p>{% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <footer class="post-foot">
+    <p>Written by {{ page.author | default: site.author }}. Questions or comments? <a href="{{ '/contact/' | relative_url }}">Get in touch</a>.</p>
+    <p><a href="{{ '/blog/' | relative_url }}">Back to all posts</a></p>
+  </footer>
+</article>

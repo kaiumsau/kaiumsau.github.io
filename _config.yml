@@ -1,0 +1,41 @@
+# ------------------------------------------------------------
+# Site settings — edit these lines, then commit.
+# ------------------------------------------------------------
+title: Kaium Research Group
+tagline: Environmental and food safety chemistry
+author: Abdul Kaium, PhD
+description: >-
+  Research, teaching materials and science writing from the group of
+  Dr. Abdul Kaium, Department of Agricultural Chemistry,
+  Sher-e-Bangla Agricultural University, Dhaka.
+
+email: your.email@sau.edu.bd          # EDIT
+phone: "+880 1XXX-XXXXXX"             # EDIT (or delete the line)
+photo: /assets/img/profile.svg        # Upload profile.jpg to assets/img and change this to /assets/img/profile.jpg
+
+orcid: 0000-0003-1952-8617
+google_scholar: ""                    # Paste your Google Scholar profile link
+researchgate: ""                      # Paste your ResearchGate profile link
+linkedin: ""                          # Paste your LinkedIn profile link
+
+# Leave baseurl empty if your repository is named <username>.github.io
+baseurl: ""
+url: ""
+
+# ------------------------------------------------------------
+# Technical settings — no need to change
+# ------------------------------------------------------------
+markdown: kramdown
+permalink: /blog/:year/:month/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "" }
+    values: { layout: default }
+exclude:
+  - HOW-TO-UPDATE.md
+  - README.md
+  - Gemfile

@@ -1,0 +1,49 @@
+---
+title: Contact
+permalink: /contact/
+description: Contact Dr. Abdul Kaium, Department of Agricultural Chemistry, Sher-e-Bangla Agricultural University, Dhaka.
+---
+<div class="wrap">
+  <header class="page-head">
+    <h1>Contact</h1>
+    <p>Students, prospective group members, collaborators and journalists are welcome to get in touch.</p>
+  </header>
+
+  <div class="contact-grid">
+    <section>
+      <h2>Office</h2>
+      <dl class="facts" style="grid-template-columns: 7rem 1fr">
+        <dt>Address</dt><dd>Department of Agricultural Chemistry<br>Sher-e-Bangla Agricultural University<br>Sher-e-Bangla Nagar, Dhaka 1207, Bangladesh</dd>
+        <dt>Email</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+        {% if site.phone %}<dt>Phone</dt><dd>{{ site.phone }}</dd>{% endif %}
+        <dt>Profiles</dt><dd><a href="https://orcid.org/{{ site.orcid }}">ORCID</a>{% if site.google_scholar != "" %}, <a href="{{ site.google_scholar }}">Google Scholar</a>{% endif %}{% if site.researchgate != "" %}, <a href="{{ site.researchgate }}">ResearchGate</a>{% endif %}{% if site.linkedin != "" %}, <a href="{{ site.linkedin }}">LinkedIn</a>{% endif %}</dd>
+      </dl>
+      <iframe class="map" title="Map of Sher-e-Bangla Agricultural University" loading="lazy" src="https://maps.google.com/maps?q=Sher-e-Bangla%20Agricultural%20University%2C%20Dhaka&z=15&output=embed"></iframe>
+    </section>
+
+    <section>
+      <h2>Send a message</h2>
+      <form class="contact-form" data-email="{{ site.email }}">
+        <label for="c-name">Your name</label>
+        <input id="c-name" name="name" required autocomplete="name">
+        <label for="c-aff">Affiliation (optional)</label>
+        <input id="c-aff" name="affiliation" autocomplete="organization">
+        <label for="c-topic">Topic</label>
+        <select id="c-topic" name="topic">
+          <option>Student enquiry</option>
+          <option>Joining the group</option>
+          <option>Research collaboration</option>
+          <option>Laboratory analysis</option>
+          <option>Media</option>
+          <option>Other</option>
+        </select>
+        <label for="c-subject">Subject</label>
+        <input id="c-subject" name="subject" required>
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg" name="message" required></textarea>
+        <button class="btn btn-solid" type="submit">Open in email app</button>
+        <p class="hint">This opens your email app with the message filled in, ready to send.</p>
+      </form>
+    </section>
+  </div>
+</div>

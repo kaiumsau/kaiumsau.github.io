@@ -1,0 +1,47 @@
+---
+title: Group members
+permalink: /group/
+description: Members of the Kaium research group at Sher-e-Bangla Agricultural University.
+---
+{% assign groups = "pi|Principal investigator,phd|PhD students,ms|MS students,ra|Research staff,alumni|Alumni" | split: "," %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Group members</h1>
+    <p>Students and researchers working with Dr. Abdul Kaium in the Department of Agricultural Chemistry.</p>
+  </header>
+
+  {% for g in groups %}
+    {% assign key = g | split: "|" | first %}
+    {% assign label = g | split: "|" | last %}
+    {% assign people = site.data.members | where: "group", key %}
+    {% if people.size > 0 %}
+    <section class="section">
+      <h2>{{ label }}</h2>
+      <ul class="people">
+        {% for m in people %}
+        <li class="person">
+          {% if m.photo and m.photo != "" %}
+            <img class="person-photo" src="{{ '/assets/img/people/' | append: m.photo | relative_url }}" alt="{{ m.name }}" loading="lazy">
+          {% else %}
+            {% assign parts = m.name | remove: "Md. " | remove: "Mst " | remove: ", PhD" | split: " " %}
+            <span class="person-photo person-initials" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+          {% endif %}
+          <div>
+            <h3>{{ m.name }}</h3>
+            <p class="person-role">{{ m.role }}{% if m.program != "" %}, {{ m.program }}{% endif %}</p>
+            {% if m.topic != "" %}<p>{{ m.topic }}</p>{% endif %}
+            {% if m.now %}<p class="person-role">Now: {{ m.now }}</p>{% endif %}
+            {% if m.email and m.email != "" %}<p><a href="mailto:{{ m.email }}">{{ m.email }}</a></p>{% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  {% endfor %}
+
+  <section class="section">
+    <h2>Join the group</h2>
+    <p class="lede">We welcome MS and PhD students interested in food safety, environmental chemistry and analytical method development. Send a short CV and a paragraph about your interests through the <a href="{{ '/contact/' | relative_url }}">contact page</a>.</p>
+  </section>
+</div>

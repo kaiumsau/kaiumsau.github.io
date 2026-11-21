@@ -1,0 +1,12 @@
+# Selected publications shown at the top of the Publications page.
+# The full list below them updates automatically from your ORCID profile.
+# To add one, remove the # signs from the example and fill it in.
+# pdf: optional — upload the open-access PDF to assets/papers/ and write its file name.
+
+# - title: Full title of the article
+#   authors: Kaium A, Coauthor B, Liu X
+#   journal: Journal Name
+#   year: 2025
+#   doi: 10.xxxx/xxxxx
+#   pdf: ""
+#   selected: true

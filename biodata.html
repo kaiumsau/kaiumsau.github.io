@@ -1,0 +1,72 @@
+---
+title: Biodata
+permalink: /biodata/
+description: Biodata of Dr. Abdul Kaium — education, appointments, fellowships and expertise.
+---
+{% assign cv = site.static_files | where: "path", "/assets/CV-Abdul-Kaium.pdf" | first %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Biodata</h1>
+    <p>Analytical and environmental chemist working on trace metals and organic micropollutants in aquatic, agricultural and biological systems.</p>
+  </header>
+
+  {% if cv %}<p class="profile-links"><a class="btn btn-solid" href="{{ cv.path | relative_url }}">Download full CV (PDF)</a></p>{% endif %}
+
+  <section class="section">
+    <h2>Personal details</h2>
+    <dl class="facts">
+      <dt>Name</dt><dd>Abdul Kaium, PhD</dd>
+      <dt>Designation</dt><dd>Associate Professor and Chairman (since 2022)</dd>
+      <dt>Department</dt><dd>Department of Agricultural Chemistry, Sher-e-Bangla Agricultural University (SAU), Sher-e-Bangla Nagar, Dhaka 1207, Bangladesh</dd>
+      <dt>Additional role</dt><dd>Officer-in-charge, SAU Food Safety Laboratory</dd>
+      <dt>Field</dt><dd>Analytical and environmental chemistry, pesticide science, food safety</dd>
+      <dt>ORCID</dt><dd><a href="https://orcid.org/{{ site.orcid }}">{{ site.orcid }}</a></dd>
+      <dt>Email</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+    </dl>
+  </section>
+
+  <section class="section">
+    <h2>Academic qualifications</h2>
+    <ul class="timeline">
+      <li><span class="when">2018–2022</span><div><h3>PhD in Pesticide Science</h3><p>Institute of Plant Protection, Chinese Academy of Agricultural Sciences (Graduate School of CAAS), Beijing, China</p></div></li>
+      <li><span class="when">2015–2018</span><div><h3>MSc in Pesticide Science</h3><p>Institute of Plant Protection, Chinese Academy of Agricultural Sciences (Graduate School of CAAS), Beijing, China</p></div></li>
+      <li><span class="when">Year</span><div><h3>Bachelor's degree (add title)</h3><p>Add institution</p></div></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Professional experience</h2>
+    <ul class="timeline">
+      <li><span class="when">2022–present</span><div><h3>Chairman, Department of Agricultural Chemistry</h3><p>Sher-e-Bangla Agricultural University, Dhaka</p></div></li>
+      <li><span class="when">Current</span><div><h3>Officer-in-charge, Food Safety Laboratory</h3><p>Sher-e-Bangla Agricultural University, Dhaka</p></div></li>
+      <li><span class="when">2023–2025</span><div><h3>Kempe Foundation Postdoctoral Fellow</h3><p>Umeå University, Sweden</p></div></li>
+      <li><span class="when">2013–present</span><div><h3>Faculty member, Department of Agricultural Chemistry</h3><p>Sher-e-Bangla Agricultural University, Dhaka. Currently Associate Professor.</p></div></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Fellowships and training</h2>
+    <ul class="timeline">
+      <li><span class="when">2026</span><div><h3>Fellowship for risk assessment training</h3><p>Chulabhorn Research Institute, Bangkok, Thailand</p></div></li>
+      <li><span class="when">2023–2025</span><div><h3>Kempe Foundation postdoctoral fellowship</h3><p>Umeå University, Sweden</p></div></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Expertise</h2>
+    <dl class="facts">
+      <dt>Research areas</dt><dd>Pesticide residues and emerging organic contaminants; trace metals and potentially toxic elements; food safety; dietary exposure and human health risk assessment</dd>
+      <dt>Sample preparation</dt><dd>QuEChERS and related extraction and clean-up methods for water, soil, sediment, crops, fish and other foods</dd>
+      <dt>Instrumentation</dt><dd>UHPLC with PDA and fluorescence detection, LC–MS/MS, atomic absorption spectrometry, UV–Vis spectrophotometry</dd>
+      <dt>Method validation</dt><dd>Linearity, recovery, precision, matrix effects, LOD/LOQ, following international guidelines</dd>
+    </dl>
+  </section>
+
+  <section class="section">
+    <h2>Collaboration and service</h2>
+    <ul class="timeline">
+      <li><span class="when">International</span><div><h3>Research partners</h3><p>Institute of Plant Protection, Chinese Academy of Agricultural Sciences, Beijing; Umeå University, Sweden</p></div></li>
+      <li><span class="when">Service</span><div><h3>Institutional MoU</h3><p>Helped the Chinese Academy of Agricultural Sciences and its Graduate School sign a memorandum of understanding with counterparts in Bangladesh</p></div></li>
+    </ul>
+  </section>
+</div>

@@ -1,0 +1,40 @@
+---
+title: Projects
+permalink: /projects/
+description: Current, proposed and completed research projects of the Kaium group.
+---
+{% assign ongoing = site.data.projects | where: "status", "ongoing" %}
+{% assign proposed = site.data.projects | where: "status", "proposed" %}
+{% assign completed = site.data.projects | where: "status", "completed" %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Projects</h1>
+    <p>Research projects led or supervised by Dr. Abdul Kaium, from funded studies to student theses.</p>
+  </header>
+
+  {% assign sets = "ongoing,proposed,completed" | split: "," %}
+  {% for s in sets %}
+    {% if s == "ongoing" %}{% assign list = ongoing %}{% assign heading = "Current projects" %}{% endif %}
+    {% if s == "proposed" %}{% assign list = proposed %}{% assign heading = "Proposed projects" %}{% endif %}
+    {% if s == "completed" %}{% assign list = completed %}{% assign heading = "Past projects" %}{% endif %}
+    {% if list.size > 0 %}
+    <section class="section">
+      <h2>{{ heading }}</h2>
+      <ul class="project-list">
+        {% for p in list %}
+        <li class="project">
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.summary }}</p>
+          <dl class="project-facts">
+            {% if p.years != "" %}<div><dt>Period</dt><dd>{{ p.years }}</dd></div>{% endif %}
+            {% if p.role != "" %}<div><dt>Role</dt><dd>{{ p.role }}</dd></div>{% endif %}
+            {% if p.funder != "" %}<div><dt>Funding</dt><dd>{{ p.funder }}</dd></div>{% endif %}
+            {% if p.partners != "" %}<div><dt>Partners</dt><dd>{{ p.partners }}</dd></div>{% endif %}
+          </dl>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  {% endfor %}
+</div>

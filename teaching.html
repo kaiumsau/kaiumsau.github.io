@@ -1,0 +1,34 @@
+---
+title: Teaching
+permalink: /teaching/
+description: Lecture notes, practical manuals and reading materials for courses taught by Dr. Abdul Kaium at Sher-e-Bangla Agricultural University.
+---
+<div class="wrap">
+  <header class="page-head">
+    <h1>Teaching materials</h1>
+    <p>Lecture notes, slides, practical manuals and reading lists for my courses at Sher-e-Bangla Agricultural University. Select a file to open or download it.</p>
+  </header>
+
+  {% for course in site.data.courses %}
+  {% assign prefix = '/materials/' | append: course.folder | append: '/' %}
+  {% assign files = site.static_files | where_exp: "f", "f.path contains prefix" | where_exp: "f", "f.basename != 'README'" | sort: "path" %}
+  <section class="course" id="{{ course.folder }}">
+    <div class="course-code">{{ course.code }}<span class="course-level">{{ course.level }}</span></div>
+    <div>
+      <h2>{{ course.title }}</h2>
+      <p>{{ course.about }}</p>
+      {% if files.size > 0 %}
+      <ul class="materials">
+        {% for f in files %}
+        <li><a href="{{ f.path | relative_url }}">{{ f.basename | replace: '-', ' ' | replace: '_', ' ' }}</a><span class="type">{{ f.extname | remove: '.' | upcase }}</span></li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="materials-empty">Materials for this course will be posted here.</p>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
+
+  <p class="note" style="margin-top:2.5rem">Materials are for students' personal study. Please ask before reusing them elsewhere.</p>
+</div>

@@ -1,0 +1,43 @@
+---
+title: Publications
+permalink: /publications/
+description: Peer-reviewed scientific articles by Dr. Abdul Kaium and the research group.
+---
+<div class="wrap">
+  <header class="page-head">
+    <h1>Scientific articles</h1>
+    <p>Peer-reviewed papers, reviews and book chapters from the group.</p>
+  </header>
+
+  <p class="profile-links">
+    <a class="btn" href="https://orcid.org/{{ site.orcid }}">ORCID profile</a>
+    {% if site.google_scholar != "" %}<a class="btn" href="{{ site.google_scholar }}">Google Scholar</a>{% endif %}
+    {% if site.researchgate != "" %}<a class="btn" href="{{ site.researchgate }}">ResearchGate</a>{% endif %}
+  </p>
+
+  {% assign selected = site.data.publications | where: "selected", true %}
+  {% if selected.size > 0 %}
+  <section class="section">
+    <h2>Selected publications</h2>
+    <ul class="pub-list">
+      {% for p in selected %}
+      <li>
+        <span class="pub-title">{{ p.title }}</span>
+        <span class="pub-meta">{{ p.authors }}. <em>{{ p.journal }}</em>, {{ p.year }}.</span>
+        <div class="pub-links">
+          {% if p.doi and p.doi != "" %}<a href="https://doi.org/{{ p.doi }}">DOI: {{ p.doi }}</a>{% endif %}
+          {% if p.pdf and p.pdf != "" %}<a href="{{ '/assets/papers/' | append: p.pdf | relative_url }}">PDF</a>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="section">
+    <h2>All publications</h2>
+    <p class="orcid-status" id="orcid-status">Loading the list from ORCID…</p>
+    <ul class="pub-list" id="orcid-works" data-orcid="{{ site.orcid }}"></ul>
+    <noscript><p><a href="https://orcid.org/{{ site.orcid }}">View all publications on ORCID</a>.</p></noscript>
+  </section>
+</div>

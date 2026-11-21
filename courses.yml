@@ -1,0 +1,25 @@
+# Courses. Upload lecture files into materials/<folder>/ and they appear automatically.
+# File names become titles: "01-Introduction-to-radiotracers.pdf" shows as "01 Introduction to radiotracers".
+- code: AGCH 107
+  folder: agch-107
+  level: Undergraduate
+  title: Chemistry of Fertilizer and Radiotracer Technique
+  about: Nuclear chemistry and the use of radioisotopes and radiotracers in agricultural research.
+
+- code: AGCH 358
+  folder: agch-358
+  level: Level 3, Semester 2
+  title: Agricultural Chemistry (Practical)
+  about: Laboratory practicals in agricultural chemistry. Practical manual, data sheets and safety notes.
+
+- code: AGCH 511
+  folder: agch-511
+  level: MS elective
+  title: Water and Solution Chemistry
+  about: Chemistry of natural waters, solution equilibria and water quality.
+
+- code: AGCH 603
+  folder: agch-603
+  level: PhD
+  title: Pesticide Transformation, Metabolism and Residue Chemistry
+  about: How pesticides break down in the environment and in organisms, and how their residues are analysed and regulated.
